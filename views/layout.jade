@@ -1,0 +1,34 @@
+!!! 5
+html
+  head
+    - if (typeof(title) == 'undefined')
+        title Express Starter Template
+    - else 
+        title= title
+    
+    // include default stylesheets and any view stylesheets
+    link(rel='stylesheet', href=base + '/stylesheets/style.css')
+    link(rel='stylesheet', href=base + '/stylesheets/bootstrap.css')
+
+    
+  
+    
+  body   
+    header
+      div(class='content-wrapper')
+        div(class="float-left")
+          p(class="site-title")
+            a(href="/") <img src="images/a2.png" width="150px" height="100px" alt="Android">ANDROID FT
+        div(class="float-right")
+             include parts/menu
+          
+       
+              
+    #body!= body
+      
+    footer
+      div(class="content-wrapper")
+        div(class="float-left")
+          p &copy; !{(new Date()).getFullYear()}
+        div(class="float-right")
+          
